@@ -8,9 +8,14 @@ app = Flask(__name__)
 @app.route("/")
 def home(): # Função a ser executada
 
+    page = {
+        'titulo': 'JocaTrecos'
+    }
+
     # retorno para o navegador
-    return render_template('_template.html')
+    return render_template('_template.html', **page)
 
 # Executa o servidor de teste
 if __name__ == '__main__':
     app.run(debug=True)
+    
