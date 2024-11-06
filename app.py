@@ -65,6 +65,18 @@ def login():
     return render_template('login.html', **pagina)
 
 
+@app.route('/cadastro', methods=['GET', 'POST'])
+def cadastro():
+
+    # Dados, variáveis e valores a serem passados para o template HTML
+    pagina = {
+        'titulo': 'CRUDTrecos - Login',
+        'usuario': usuario
+    }
+
+    return render_template('cadastro.html', **pagina)
+
+
 # Executa o servidor HTTP se estiver no modo de desenvolvimento
 # Remova / comente essas linhas no modo de produção
 if __name__ == '__main__':
